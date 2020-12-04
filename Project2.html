@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="../img/image/Project/1.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        .row.content {
+            height: 450px
+        }
+
+        .sidenav {
+            padding-top: 20px;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        h2 {
+            font-style: italic;
+        }
+
+        div#nhan {
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        div.checkbox {
+            border: 3px solid black;
+            width: 1000px;
+            display: flex;
+            flex-wrap: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .fuck {
+            width: 360px;
+            height: 228px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .txt {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.52);
+            position: absolute;
+            bottom: 50px;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            opacity: 0;
+        }
+
+        .fuck:hover div.txt {
+            opacity: 1;
+            transform: translateY(50px);
+            transition: ease-in-out 0.5s;
+        }
+
+        .fuck:hover img {
+            transform: scale(1.5);
+            transition: all ease-in-out 0.5s;
+        }
+
+        .container {
+            position: relative;
+            width: 1200px;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 1200px;
+            height: 720px;
+            transition: .6s ease;
+            backface-visibility: hidden;
+        }
+
+        .readmore {
+            transition: .6s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .container:hover .image {
+            opacity: 0.5;
+        }
+
+        .container:hover .readmore {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: pink;
+            color: red;
+            font-size: 18px;
+            padding: 16px 32px;
+            font-weight: bold;
+        }
+
+        i#ez{
+            color: burlywood;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
+        <div class="container-fluid">
+            <div class="navbar-header" style="padding-left: 50px;">
+                <a href="project.html"><img src="../Project/Project/1.png" width="100px" alt=""></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right" style="font-size: 2rem; padding-top: 25px;">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" style="color: black;"
+                        href="">National
+                        Park <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="font-size: 2rem;">
+                        <li><a href="Asia.html">Asia</a></li>
+                        <li><a href="">Europe </a></li>
+                        <li><a href="">Africa</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" style="color: black;"
+                        href="">Things to
+                        see & Do <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="font-size: 2rem;">
+                        <li><a href="">Hiking</a></li>
+                        <li><a href="">Driving</a></li>
+                        <li><a href="">Camping</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-trigger="hover" data-toggle="dropdown"
+                        style="color: black;" href="">Plan To Visit <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="font-size: 2rem;">
+                        <li><a href="">Where To Stay</a></li>
+                        <li><a href="">Seasons and Climate</a></li>
+                        <li><a href="">What To Bring</a></li>
+                        <li><a href="">Good To Know</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" style="color: black;"
+                        href="">Discover
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="font-size: 2rem;">
+                        <li><a href="">National Park Story</a></li>
+                        <li><a href="">Conservation</a></li>
+                        <li><a href="">Plants & Animals</a></li>
+                    </ul>
+                </li>
+                <li><a class="glyphicon glyphicon-search" href=""></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center" id="nhan">
+        <div class="col-sm-12 center-block">
+            <div id="ytplayer">
+                <iframe width="1200" height="720" src="https://www.youtube.com/embed/uOhZ92gMi18" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h2>Selous Game Reserve</h2>
+                <p>A Comprehensive Guide to Selous Game Reserve Tanzania
+                    The Selous Game Reserve is the largest protected game reserve on the African continent covering an
+                    area of 54,600 square kilometers comprised of a vast wilderness with forests, grassy plains,
+                    mountains and open woodlands. This reserve was named after Frederick Selous Courtney who was a great
+                    Hunter and explorer. Selous Safari Holidays are highly recommended as in size this reserve is twice
+                    the Serengeti National Park in Kenya and three times Kruger National Park in South Africa. This
+                    reserve was established in 1922, and in 1982 it was declared a UNESCO world heritage site thanks to
+                    its rich diversity of wildlife and uninterrupted nature.
+                    The Tanzanian national park authority (TANAPA) in 2019 proposed and declared a change of identity of
+                    the northern sector of this reserve such that it is known as The Nyerere National Park as a way of
+                    honoring President Julius Nyerere who was the first president of Tanzania. Today the boundaries of
+                    this Nyerere National Park are being properly established but according to sources it is believed
+                    that this park will encompass the photographic sector in the northern part of the reserve and
+                    stretch out all the way to the wilderness area of River Rufiji to the south.</p>
+            </div>
+
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Size</th>
+                            <th>Established</th>
+                            <th>Coordinates</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>Tanzania</td>
+                        <td>54,600 km2 (21,100 sq mi)</td>
+                        <td>1922</td>
+                        <td>9°0′S 37°24′E</td>
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+
+            <div class="col-sm-6 center-block">
+                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1587310.4342152092!2d36.64290512859763!3d-9.56667012057791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18f79b5a48b81825%3A0xbd987d916c7c778!2sSelous%20Mapumziko%20Lodge!5e0!3m2!1svi!2s!4v1605932623238!5m2!1svi!2s"
+                        width="525" height="398" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+
+            <div class="col-sm-6 center-block">
+                <img src="../Project/Project/18.png" alt="">
+            </div>
+
+            <div class="col-md-12" id="nhan">
+                <h2>Things to See and Do</h2>
+                <p>during your Selous Safari Holiday there are a number of different activities you can engage in that
+                    will surely offer you a very memorable experience while in Africa as highlighted below.</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <div class="checkbox">
+                    <div class="fuck">
+                        <img src="../Project/Project/19.jpg" alt="">
+                        <div class="txt">
+                            <a href="AWalking safaris.html">
+                                <h3>AWalking safaris</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="fuck">
+                        <img src="../Project/Project/20.jpg" alt="">
+                        <div class="txt">
+                            <a href="Hot Air Balloon Safaris.html">
+                                <h3>Hot Air Balloon Safaris</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="fuck">
+                        <img src="../Project/Project/21.jpg" alt="">
+                        <div class="txt">
+                            <a href="Bird watching tours.html">
+                                <h3>Bird watching tours</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <div class="container">
+                <img src="../Project/Project/17.jpg" class="image" style="width:100%">
+                <div class="readmore">
+                    <a href="Project2.html">
+                        <div class="text">Plants & Animals</div>
+                    </a>
+                </div>
+            </div>
+            <br><br>
+            <div>
+                <div class="col-sm-4 left">
+                    <i class="fa fa-bicycle" style="font-size:48px" id="ez"></i>
+                    <h3>Visiting the Parks</h3>
+                </div>
+
+                <div class="col-sm-4 center-block">
+                    <i class="fa fa-paw" style="font-size:48px" id="ez"></i>
+                    <h3>Plants & Animals</h3>
+                    
+                </div>
+
+                <div class="col-sm-4 right">
+                    <i class="fa fa-motorcycle" style="font-size:48px" id="ez"></i>
+                    <h3>Walking</h3>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid" style="background-color: #1f222e">
+        <br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="#"><img src="../images/125310170_810468032854566_422312105572935311_n.png" width="100px"
+                            alt=""></a>
+                    <br> <br>
+
+                    <p style="color: white;">590 Cach Mang Thang Tam str, Ward 11, District 3, Ho Chi Minh city</p>
+                    <a href=""><i class="fa fa-facebook-official" style="font-size:36px; color: white; "></i></a>
+                    <a href=""><i class="fa fa-youtube-square" style="font-size:36px;color:red"></i></i></a>
+                    <a href=""><i class="fa fa-instagram" style="font-size:36px;color:red"></i></a>
+                    <a href=""><i class="fa fa-twitter" style="font-size:36px;color: skyblue"></i></a>
+                </div>
+                <div class="col-lg-4">
+                    <h3 style="color: white;">Site Map</h3>
+                    <br>
+                    <a href="">National Park</a> <br>
+                    <a href="">Thing To See % Do</a> <br>
+                    <a href="">Plan To Visit</a> <br>
+                    <a href="">Discover</a>
+                </div>
+                <div class="col-lg-4">
+                    <h3 style="color: white;">Pleasant Tours</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><a href="AkanMashu.html">Akan-Mashu</a></p>
+                            <p><a href="Jiuzhaigou.html">Jiuzhaigou</a></p>
+                            <p><a href="Cucphuong.html">Cuc Phuong</a></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a href="">Nha Trang</a></p>
+                            <p><a href="">Nha Trang</a></p>
+                            <p><a href="">Da Lat</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <footer>
+                    <hr>
+                    <p style="text-align: center; color: white;">Copyright &copy; 2020 All rights reserved</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
